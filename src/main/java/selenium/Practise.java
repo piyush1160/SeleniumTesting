@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import static selenium.ExtractPass.passExtractor;
 
@@ -12,7 +13,10 @@ public class Practise {
 	static String name = "sam";
 	static String pass = "rahulshettyacademy";
 
-	public static void main(String[] args) throws Exception {
+
+
+	@Test
+	public static void test001() throws Exception {
 
 		for(int i =0 ; i <1 ;i++) {
 			invokeBrowser();

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
@@ -61,9 +62,15 @@ public class DropdownPrac {
 
           //  Thread.sleep(3000);
         // System.out.println( driver.findElement(By.xpath("//input[@id='ctl00_mainContent_ddl_destinationStation1_CTXT']")).getText());
-        //  Thread.sleep(1000);
-          driver.findElement(By.xpath("//a[@class=\"ui-state-default ui-state-highlight\"]")).click();
+          Thread.sleep(2000);
+          //driver.findElement(By.xpath("//a[@class=\"ui-state-default ui-state-highlight\"]")).click();
+         driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/div[1]/table/tbody/tr[4]/td[7]/a")).click();
 
+         // driver.findElement(By.xpath("//a[@class='ui-state-default ui-state-highlight ui-state-active']")).click();
+          Thread.sleep(1000);
+
+
+         driver.findElement(By.xpath("//input[@value='Search']")).click();
           Thread.sleep(1000);
 
           nonSelectedDropdown(driver);
@@ -91,7 +98,7 @@ public class DropdownPrac {
 
 
     public static void UpdatedDropdown(WebDriver driver) throws Exception{
-        Thread.sleep(2000L);
+        Thread.sleep(2000);
         driver.findElement(By.id("divpaxinfo")).click();
         System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
         Thread.sleep(2000);
@@ -108,7 +115,37 @@ public class DropdownPrac {
     }
 
 
-    public static void main(String[] args) throws Exception {
-        performAction();
+   public static void handlinAlert()throws Exception{
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+        driver.findElement(By.id("name")).sendKeys("Piyush");
+        Thread.sleep(1000);
+        // alert button
+       driver.findElement(By.id("alertbtn")).click();
+       System.out.println(driver.switchTo().alert().getText());
+       Thread.sleep(1000);
+
+       // handle the alert appear on the screen ..
+       driver.switchTo().alert().accept();
+       driver.findElement(By.id("name")).sendKeys("Bhatia");
+       driver.findElement(By.id("confirmbtn")).click();
+        System.out.println(driver.switchTo().alert().getText());
+        Thread.sleep(1000 );
+       driver.switchTo().alert().dismiss();
+
+        Thread.sleep(1000);
+        driver.quit();
+   }
+
+
+    @Test
+    public static void test002() throws Exception {
+
+//       for(int i =0;i<5;i++){
+//           performAction();
+//       }
+
+       handlinAlert();
+
     }
 }

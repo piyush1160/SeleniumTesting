@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Testing {
+
    public static void main (String args[]) throws Throwable{
 	 // System.setProperty("webdriver.chrome.driver","/Users/piyushbhatia/Downloads/chromedriver-mac-arm64/chromedriver");
      
