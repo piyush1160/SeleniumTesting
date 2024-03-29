@@ -28,7 +28,7 @@ public class windowHandlePractise {
         driver.findElement(By.xpath("//input[@value='admin']")).click();
         driver.findElement(By.xpath("//input[@type='checkbox']")).click();
         driver.findElement(By.id("signInBtn")).click();
-Thread.sleep(2000);
+        Thread.sleep(2000);
          driver.quit();
 
     }

@@ -13,6 +13,7 @@ public class actionDemo {
 
     public static void actiondemo(WebDriver driver){
         Actions as = new Actions(driver);
+        // context click is used for double click ....
        as.moveToElement(driver.findElement(By.cssSelector("a[id='nav-link-accountList']"))).contextClick().build().perform();
        as.moveToElement(driver.findElement(By.id("twotabsearchtextbox"))).click().keyDown(Keys.SHIFT).sendKeys("iphone").doubleClick().build().perform() ;
     }
