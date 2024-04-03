@@ -1,0 +1,49 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/piyushbhatia/Documents/AutomationTesting/MySeleniumSessions">
+        <classes>
+            <class name="selenium.AddToCart">
+                <methods>
+                    <include name="addingToCart"/>
+                </methods>
+            </class>
+            <class name="selenium.DropdownPrac">
+                <methods>
+                    <include name="test002"/>
+                </methods>
+            </class>
+            <class name="selenium.Practise">
+                <methods>
+                    <include name="test001"/>
+                </methods>
+            </class>
+            <class name="selenium.Scope">
+                <methods>
+                    <include name="test001"/>
+                </methods>
+            </class>
+            <class name="selenium.actionDemo">
+                <methods>
+                    <include name="test001"/>
+                </methods>
+            </class>
+            <class name="selenium.calenderUI">
+                <methods>
+                    <include name="UI"/>
+                </methods>
+            </class>
+            <class name="selenium.frameTest">
+                <methods>
+                    <include name="test001"/>
+                </methods>
+            </class>
+            <class name="selenium.windowHandlePractise">
+                <methods>
+                    <include name="test002"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
